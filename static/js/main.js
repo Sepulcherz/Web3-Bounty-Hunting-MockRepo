@@ -7,7 +7,7 @@ let currentAccount = null;
 let bountyInterface = null;
 let isValidator = false;
 let githubIntegration = null;
-const githubToken = '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'; // Not a permanent token, so if you get any error because of this (like 403 or something), just create your own token via github (classic token, not fine-grained).
+const githubToken = 'YOU_TOKEN_HERE'; // Create your own token via github and paste it here (classic token, not fine-grained).
 let proposalPRs = new Map(); // Store PR URLs by proposal ID
 
 async function initialize() {

@@ -51,7 +51,7 @@ cp .env.example .env
 PRIVATE_KEY=your_metamask_private_key_here
 ```
 
-6. Fill in your github token if you get 403 error in main.js (I initially created a 1 month duration token, for testing purposes, so it won't grant access forever)
+6. Fill in your github token in main.js
 ```
 const githubToken = 'your_token_here'
 ```
