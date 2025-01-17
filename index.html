@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounty Hunter Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/toast.css">
+</head>
+<body>
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Wallet Connection Section -->
+    <div class="container">
+        <h1>HUNTER, CONNECT YOUR WALLET</h1>
+        <div id="connection-status" class="status">
+            Wallet Status: Not Connected
+        </div>
+        <button id="connect-wallet" class="button">
+            CONNECT WALLET
+        </button>
+    </div>
+
+    <!-- Repository Connection Section -->
+    <div class="container">
+        <div class="section-header">
+            <h2>REPOSITORY CONNECTION</h2>
+        </div>
+        <div id="repo-status" class="status">
+            Repository Status: Not Connected
+        </div>
+        <div class="repo-controls">
+            <input 
+                type="text" 
+                id="repo-url" 
+                class="input-field" 
+                placeholder="Enter repository URL (e.g., owner/repo)"
+            >
+            <button id="connect-repo" class="button">
+                CONNECT REPOSITORY
+            </button>
+        </div>
+    </div>
+
+    <!-- Issues Section -->
+    <div id="issues-section" class="container hidden">
+        <div class="section-header">
+            <h2>AVAILABLE TASKS</h2>
+        </div>
+        <div class="issues-grid">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Active Projects Section with Filters -->
+    <div class="container">
+        <div class="section-header">
+            <h2>ACTIVE PROJECTS</h2>
+            <div class="sort-control">
+                <select id="sort-order" class="input-field">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Projects/Proposals Grid -->
+        <div class="proposals-grid">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Validator Panel (Hidden by default) -->
+    <div id="validator-panel" class="container hidden">
+        <h2>VALIDATOR CONTROLS</h2>
+        <div class="validator-stats">
+            <div class="stat">
+                <label>Proposals Reviewed:</label>
+                <span id="reviewed-count">0</span>
+            </div>
+            <div class="stat">
+                <label>Pending Reviews:</label>
+                <span id="pending-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contribution Workflow Modal -->
+    <div id="workflow-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>CONTRIBUTION WORKFLOW</h3>
+            <div class="workflow-steps">
+                <div class="step">
+                    <h4>1. Fork Repository</h4>
+                    <p>Create your own copy of the repository</p>
+                    <button onclick="handleForkRepo()" class="button">FORK REPOSITORY</button>
+                </div>
+                <div class="step">
+                    <h4>2. Clone & Setup</h4>
+                    <div class="code-block">
+                        <pre id="clone-command">git clone [your-fork-url]</pre>
+                        <button onclick="copyToClipboard('clone-command')" class="button-secondary">COPY</button>
+                    </div>
+                </div>
+                <div class="step">
+                    <h4>3. Create Branch</h4>
+                    <div class="code-block">
+                        <pre id="branch-command">git checkout -b fix/issue-[number]</pre>
+                        <button onclick="copyToClipboard('branch-command')" class="button-secondary">COPY</button>
+                    </div>
+                </div>
+                <div class="step">
+                    <h4>4. Submit Changes</h4>
+                    <p>After pushing your changes, create a Pull Request</p>
+                    <button onclick="prepareAndShowSolutionModal()" class="button">SUBMIT SOLUTION</button>
+                </div>
+            </div>
+            <button onclick="closeWorkflowModal()" class="button button-secondary">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- Submit Solution Modal -->
+    <div id="solution-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>SUBMIT SOLUTION</h3>
+            <form id="solution-form">
+                <input type="hidden" id="issue-number">
+                <div class="form-group">
+                    <label>Pull Request URL</label>
+                    <input type="text" id="pr-url" class="input-field" required 
+                           placeholder="https://github.com/owner/repo/pull/123">
+                </div>
+                <div class="form-group">
+                    <label>Additional Notes</label>
+                    <textarea id="solution-notes" class="input-field" 
+                              placeholder="Describe your solution..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="button">SUBMIT</button>
+                    <button type="button" class="button button-secondary" 
+                            onclick="closeSolutionModal()">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Processing...</div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="static/js/main.js"></script>
+</body>
+</html>

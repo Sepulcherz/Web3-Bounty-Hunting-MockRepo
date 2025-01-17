@@ -1,0 +1,11 @@
+C:\Users\mr_de\Desktop\bounty-project\target\wasm32-unknown-unknown\release\deps\libgetrandom-2f5b63c38fe598b0.rmeta: C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src/lib.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\util.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error_impls.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\js.rs
+
+C:\Users\mr_de\Desktop\bounty-project\target\wasm32-unknown-unknown\release\deps\libgetrandom-2f5b63c38fe598b0.rlib: C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src/lib.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\util.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error_impls.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\js.rs
+
+C:\Users\mr_de\Desktop\bounty-project\target\wasm32-unknown-unknown\release\deps\getrandom-2f5b63c38fe598b0.d: C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src/lib.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\util.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error_impls.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\js.rs
+
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src/lib.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\util.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\error_impls.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\getrandom-0.2.15\src\js.rs:

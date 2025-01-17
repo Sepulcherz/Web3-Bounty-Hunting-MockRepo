@@ -1,0 +1,13 @@
+C:\Users\mr_de\Desktop\bounty-project\target\debug\deps\libsemver-6c9c68f8af5e781a.rmeta: C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src/lib.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\backport.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\display.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\error.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\eval.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\identifier.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\impls.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\parse.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\serde.rs
+
+C:\Users\mr_de\Desktop\bounty-project\target\debug\deps\semver-6c9c68f8af5e781a.d: C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src/lib.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\backport.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\display.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\error.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\eval.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\identifier.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\impls.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\parse.rs C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\serde.rs
+
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src/lib.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\backport.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\display.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\error.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\eval.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\identifier.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\impls.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\parse.rs:
+C:\Users\mr_de\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\serde.rs:

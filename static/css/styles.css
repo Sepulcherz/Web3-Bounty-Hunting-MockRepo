@@ -1,0 +1,463 @@
+/* Enhanced cyberpunk styling */
+:root {
+    --neon-blue: #0ff;
+    --neon-pink: #f0f;
+    --dark-bg: #0a0a0f;
+    --darker-bg: #050507;
+    --grid-color: rgba(0, 255, 255, 0.1);
+    --warning-color: #ff9900;
+    --error-color: #ff0033;
+    --success-color: #00ff66;
+}
+
+/* Base styles and grid background */
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--dark-bg);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Containers */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--darker-bg);
+    border: 1px solid var(--neon-blue);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: var(--neon-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Buttons */
+.button {
+    background: transparent;
+    color: var(--neon-blue);
+    border: 1px solid var(--neon-blue);
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.button:hover {
+    background: var(--neon-blue);
+    color: var(--dark-bg);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Filters Grid */
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    position: relative;
+}
+
+/* Input Fields */
+.input-field {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid var(--neon-blue);
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.input-field:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Dropdown menu styling */
+
+select.input-field {
+    background-color: var(--darker-bg);
+    color: var(--neon-blue);
+    border: 1px solid var(--neon-blue);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 12px;
+    width: 100%;
+    /* Custom arrow */
+    background-image: 
+        linear-gradient(45deg, transparent 50%, var(--neon-blue) 50%),
+        linear-gradient(135deg, var(--neon-blue) 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Dropdown menu items */
+select.input-field option {
+    background-color: #1a1a1a; /* Darker background for options */
+    color: #0ff; /* Bright text color */
+    padding: 12px;
+}
+
+/* Dropdown options */
+select.input-field option {
+    background: #1a1a1a !important; /* Dark background */
+    color: #0ff !important; /* Bright cyan text */
+    padding: 12px;
+}
+
+/* When dropdown is open */
+select.input-field:focus {
+    outline: none;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Selected option */
+select.input-field option:checked {
+    background: #2d2d2d !important;
+    color: #0ff !important;
+}
+
+/* Hover state for options */
+select.input-field option:hover {
+    background-color: #333;
+}
+
+/* Custom arrow for select */
+select.input-field {
+    background-image: 
+        linear-gradient(45deg, transparent 50%, var(--neon-blue) 50%),
+        linear-gradient(135deg, var(--neon-blue) 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Proposals Grid */
+.proposals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.proposal-card {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid var(--neon-blue);
+    padding: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.proposal-card:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.proposal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.proposal-id {
+    color: var(--neon-blue);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.proposal-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.difficulty {
+    color: var(--warning-color);
+}
+
+.skills {
+    color: var(--neon-pink);
+    font-size: 0.9em;
+}
+
+.proposal-content {
+    margin: 15px 0;
+}
+
+.pr-link {
+    color: var(--neon-blue);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.pr-link:hover {
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Status Indicators */
+.status {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border-left: 4px solid var(--neon-blue);
+    background: rgba(0, 255, 255, 0.05);
+}
+
+/* Validator Panel */
+.validator-panel {
+    border-color: var(--neon-pink);
+    background: rgba(255, 0, 255, 0.05);
+}
+
+.validator-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.stat {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.stat label {
+    display: block;
+    color: var(--neon-pink);
+    margin-bottom: 5px;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--darker-bg);
+    border-top: 3px solid var(--neon-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-top: 20px;
+    color: var(--neon-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .proposals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* GitHub Section */
+.github-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Issues Grid */
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.issue-card {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid var(--neon-blue);
+    padding: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.issue-card:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.issue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.issue-number {
+    color: var(--neon-blue);
+    font-weight: bold;
+}
+
+.issue-status {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--neon-blue);
+}
+
+.issue-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.issue-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* Solution Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--darker-bg);
+    border: 1px solid var(--neon-blue);
+    border-radius: 4px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--neon-blue);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.repo-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.repo-controls .input-field {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.repo-controls .button {
+    width: fit-content;
+}
+
+/* Force light text on dark background for all states */
+select.input-field option:hover,
+select.input-field option:focus,
+select.input-field option:active {
+    background: #2d2d2d !important;
+    color: #0ff !important;
+}
