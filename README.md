@@ -28,7 +28,7 @@ Nothing too serious, but if it's useful to you, feel free to use it!
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/Web3-Bounty-Hunting-MockRepo.git
-cd task-bounty-dapp
+cd Web3-Bounty-Hunting-MockRepo
 ```
 
 2. Install Node.js dependencies:
