@@ -10,7 +10,7 @@ This project is a task bounty platform where:
 - Validators can review and approve solutions (not implemented)
 - Rewards are managed through smart contracts (not implemented)
 
-I created it (and also created the "decentra-chat" repo, which go hand in hand to test some interactions) for a personal purpose, just to see if I had grasped the concept of interactions in a web3 environment.
+I created it (and also created the "https://github.com/Sepulcherz/decentra-chat" repo, which go hand in hand to test some interactions) for a personal purpose, just to see if I had grasped the concept of interactions in a web3 environment.
 
 Nothing too serious, but if it's useful to you, feel free to use it!
 
