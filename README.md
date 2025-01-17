@@ -95,7 +95,7 @@ The project uses a smart contract deployed on Sepolia testnet at: `0xDE4eADf86cd
 2. Connect to a GitHub repository
 3. Create or browse tasks
 4. Submit solutions through GitHub PRs
-5. Wait for validator approval
+5. Wait for validator approval (not implemented)
 
 ## Contributing
 
