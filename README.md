@@ -48,7 +48,7 @@ cp .env.example .env
 
 5. Fill in your environment variables in .env:
 ```
-PRIVATE_KEY=your_metamask_private_key_here
+PRIVATE_KEY=your_metamask_private_key_here (WARNING : THIS IS USELESS, IGNORE THIS!!!)
 ```
 
 6. Fill in your github token in main.js
