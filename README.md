@@ -46,12 +46,7 @@ wasm-pack build
 cp .env.example .env
 ```
 
-5. Fill in your environment variables in .env:
-```
-PRIVATE_KEY=your_metamask_private_key_here
-```
-
-6. Fill in your github token in main.js
+5. Fill in your github token in main.js
 ```
 const githubToken = 'your_token_here'
 ```
