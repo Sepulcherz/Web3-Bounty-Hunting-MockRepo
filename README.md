@@ -26,7 +26,7 @@ I created it along with the companion repository ["decentra-chat"](https://githu
 1. Clone the repository:
 ```bash
 git clone https://github.com/Sepulcherz/Web3-Bounty-Hunting-MockRepo.git
-cd bounty-project
+cd Web3-Bounty-Hunting-MockRepo
 ```
 
 2. Clean any existing builds (if encountering issues):
