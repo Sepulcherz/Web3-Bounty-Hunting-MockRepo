@@ -51,70 +51,7 @@ wasm-pack build --target web
 npm install --save-dev @babel/core @babel/preset-env babel-loader
 ```
 
-## Project Files - IMPORTANT, you need to create these files manually (and modify package.json)
-
-### package.json
-```json
-{
-  "name": "bounty-project",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "dev": "webpack serve --open"
-  },
-  "devDependencies": {
-    "copy-webpack-plugin": "^12.0.2",
-    "html-webpack-plugin": "^5.6.3",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.15.2"
-  }
-}
-```
-
-### webpack.config.js <- in root directory
-```javascript
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-    },
-    experiments: {
-        asyncWebAssembly: true
-    },
-    devServer: {
-        static: {
-            directory: path.join(__dirname, '.')
-        }
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html'
-        })
-    ]
-};
-```
-
-### src/index.js
-```javascript
-import init, { BountyInterface } from '../pkg/bounty_project.js';
-
-async function run() {
-    await init();
-    const bounty = new BountyInterface("0x0000");
-    await bounty.connect();
-    console.log("Connected!");
-}
-
-run().catch(console.error);
-```
-
-Now you can run
+6. Now you can run
 ```
 npm run dev
 ```
