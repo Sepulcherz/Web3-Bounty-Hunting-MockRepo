@@ -36,22 +36,43 @@ rm -rf node_modules/
 rm package-lock.json
 ```
 
-3. Initialize npm project if package.json doesn't exist:
+3. Install dependencies:
 ```bash
-npm init -y
+npm install
 ```
 
-4. Update package.json scripts:
+4. Build the WebAssembly module:
+```bash
+wasm-pack build --target web
+```
+
+5. Start the development server:
+```bash
+npm run dev
+```
+
+## Project Files
+
+### package.json
 ```json
 {
+  "name": "bounty-project",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve --open"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.2"
   }
 }
 ```
 
-5. Create webpack.config.js in the root directory:
+### webpack.config.js
 ```javascript
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -79,37 +100,18 @@ module.exports = {
 };
 ```
 
-6. Create src/index.js:
+### src/index.js
 ```javascript
-import { BountyInterface, start } from '../pkg/bounty_project.js';
+import init, { BountyInterface } from '../pkg/bounty_project.js';
 
-async function main() {
-    try {
-        start();
-        const bounty = new BountyInterface("0x0000");
-        await bounty.connect();
-        console.log("Connected successfully!");
-    } catch (e) {
-        console.error("Error:", e);
-    }
+async function run() {
+    await init();
+    const bounty = new BountyInterface("0x0000");
+    await bounty.connect();
+    console.log("Connected!");
 }
 
-main();
-```
-
-7. Install dependencies:
-```bash
-npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
-```
-
-8. Build the WebAssembly module:
-```bash
-wasm-pack build --target web
-```
-
-9. Start the development server:
-```bash
-npm run dev
+run().catch(console.error);
 ```
 
 ## Smart Contract
@@ -137,25 +139,17 @@ The project uses a smart contract deployed on Sepolia testnet at: `0xDE4eADf86cd
 │   ├── lib.rs         # Rust/WASM core logic
 │   └── index.js       # JavaScript entry point
 ├── pkg/               # WebAssembly output (generated)
-├── index.html         # Main HTML file
 ├── webpack.config.js  # Webpack configuration
-└── contracts/         # Smart contract code
+└── package.json      # Project configuration
 ```
 
 ## Troubleshooting
 
 If you encounter issues:
 
-1. "Cannot find module" or similar webpack errors:
-   - Make sure all files exist in the correct locations
-   - Check that src/index.js and webpack.config.js are set up correctly
+1. Make sure all prerequisites are installed
 
-2. If you see "'webpack' is not recognized":
-   ```bash
-   npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
-   ```
-
-3. For any other issues, try cleaning and rebuilding:
+2. Try cleaning and rebuilding:
    ```bash
    rm -rf pkg/
    rm -rf node_modules/
@@ -164,9 +158,9 @@ If you encounter issues:
    wasm-pack build --target web
    ```
 
-4. Check the browser console for errors
+3. Check the browser console for errors
 
-5. Ensure your MetaMask is connected to Sepolia testnet
+4. Ensure your MetaMask is connected to Sepolia testnet
 
 ## Contributing
 
