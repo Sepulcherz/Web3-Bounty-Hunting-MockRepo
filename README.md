@@ -46,7 +46,7 @@ npm install
 wasm-pack build --target web
 ```
 
-5. Start the development server:
+5. Install the required babel dependencies:
 ```bash
 npm install --save-dev @babel/core @babel/preset-env babel-loader
 ```
