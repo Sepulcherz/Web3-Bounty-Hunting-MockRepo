@@ -5,14 +5,12 @@ A decentralized application for managing bounties and tasks using WebAssembly, R
 ## Overview
 
 This project is a task bounty platform where:
-- Users can connect to repositories and see the issues in "avalaible task" if there are some 
+- Users can connect to repositories and see the issues in "available tasks"
 - Hunters can propose solutions via GitHub PRs
 - Validators can review and approve solutions (not implemented)
 - Rewards are managed through smart contracts (not implemented)
 
-I created it (and also created the "https://github.com/Sepulcherz/decentra-chat" repo, which go hand in hand to test some interactions) for a personal purpose, just to see if I had grasped the concept of interactions in a web3 environment.
-
-Nothing too serious, but if it's useful to you, feel free to use it!
+I created it along with the companion repository ["decentra-chat"](https://github.com/Sepulcherz/decentra-chat) to test Web3 interactions.
 
 ## Prerequisites
 
@@ -27,40 +25,35 @@ Nothing too serious, but if it's useful to you, feel free to use it!
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Web3-Bounty-Hunting-MockRepo.git
-cd Web3-Bounty-Hunting-MockRepo
+git clone https://github.com/Sepulcherz/bounty-project.git
+cd bounty-project
 ```
 
-2. Install Node.js dependencies:
+2. Clean any existing builds (if encountering issues):
+```bash
+rm -rf pkg/
+rm -rf node_modules/
+rm package-lock.json
+```
+
+3. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Build the WebAssembly module:
+4. Build the WebAssembly module:
 ```bash
-wasm-pack build
+wasm-pack build --target web
 ```
 
-4. Create a .env file based on .env.example:
-```bash
-cp .env.example .env
-```
-
-5. Fill in your github token in main.js
-```
-const githubToken = 'your_token_here'
-```
-## Development Setup
-
-1. Make sure you have Sepolia testnet configured in MetaMask
-
-2. Get some Sepolia ETH from a faucet:
-   - [Sepolia Faucet](https://sepoliafaucet.com/)
-   - [Alchemy Faucet](https://sepoliafaucet.com/)
-
-3. Start the development server:
+5. Start the development server:
 ```bash
 npm run dev
+```
+
+6. Be sure to create/use a token in static/js/main.js :
+```
+const githubToken = 'YOUR_TOKEN_HERE'
 ```
 
 ## Smart Contract
@@ -68,43 +61,48 @@ npm run dev
 The project uses a smart contract deployed on Sepolia testnet at: `0xDE4eADf86cdC4B4E952439c24FbeD634728C6428`
 
 ### Contract Features
-- Task creation with rewards (not implemented, you can create tasks, but you won't get any rewards for them, I could have make some "mock" rewards but I didn't do it, did some logic template in TaskBounty.sol, but they aren't used, like some lines of code in this repo, sorry, it's a bit messy)
+- Task creation with rewards (not implemented)
 - Proposal submission
 - Multi-validator approval system (not implemented)
 - Automated reward distribution (not implemented)
 
-## Project Structure
-
-```
-/
-├── src/                # Frontend source code
-├── static/             # Static assets
-├── pkg/               # WebAssembly output
-├── scripts/           # Helper scripts
-└── contracts/         # Smart contract code
-```
-
 ## Usage
 
-1. Connect your MetaMask wallet (Be sure to do that first before connecting to any repo, or you won't be able to see the "submit solution" button on the displayed cards, sorry, got lazy near the end)
+1. Connect your MetaMask wallet (do this first to see the "submit solution" button)
 2. Connect to a GitHub repository
-3. Create or browse tasks
+3. Browse available tasks
 4. Submit solutions through GitHub PRs
 5. Wait for validator approval (not implemented)
 
+## Project Structure
+```
+/
+├── src/
+│   ├── lib.rs         # Rust/WASM core logic
+│   └── index.js       # JavaScript entry point
+├── pkg/               # WebAssembly output (generated)
+└── contracts/         # Smart contract code
+```
+
+## Troubleshooting
+
+If you encounter issues:
+1. Make sure all prerequisites are installed
+2. Try cleaning and rebuilding:
+   ```bash
+   rm -rf pkg/
+   rm -rf node_modules/
+   rm package-lock.json
+   npm install
+   wasm-pack build --target web
+   ```
+3. Check the browser console for errors
+4. Ensure your MetaMask is connected to Sepolia testnet
+
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+Feel free to open issues or submit PRs!
 
-## Acknowledgments
-
-- Built with Rust and WebAssembly
-- Smart contracts deployed on Ethereum Sepolia testnet
-- GitHub integration for PR management
-- MetaMask for wallet connectivity
+## License
 
 HAPPY TESTING!
