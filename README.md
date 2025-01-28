@@ -97,31 +97,17 @@ async function main() {
 main();
 ```
 
-7. Create index.html in the root directory:
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Bounty Project</title>
-</head>
-<body>
-    <div id="app"></div>
-</body>
-</html>
-```
-
-8. Install dependencies:
+7. Install dependencies:
 ```bash
 npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
 ```
 
-9. Build the WebAssembly module:
+8. Build the WebAssembly module:
 ```bash
 wasm-pack build --target web
 ```
 
-10. Start the development server:
+9. Start the development server:
 ```bash
 npm run dev
 ```
