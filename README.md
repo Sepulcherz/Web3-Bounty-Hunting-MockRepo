@@ -116,7 +116,7 @@ Connect your wallet first (important)
 
 ![localhost_8080_ (5)](https://github.com/user-attachments/assets/58410edd-4bf2-48f9-8b52-c0f358bbf21d)
 
-Paste your repo (or my "decentra-chat", as you want)
+Paste your repo (my "decentra-chat" would not work for yourself, since I accessed it with my own token)
 
 ![localhost_8080_ (6)](https://github.com/user-attachments/assets/a40dd8ea-f9f2-47a3-a4f7-382e5aa267bc)
 
