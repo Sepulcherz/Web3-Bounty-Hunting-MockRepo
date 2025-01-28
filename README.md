@@ -51,7 +51,7 @@ wasm-pack build --target web
 npm install --save-dev @babel/core @babel/preset-env babel-loader
 ```
 
-## Project Files (IMPORTANT, you need to create these files manually)
+## Project Files - IMPORTANT, you need to create these files manually (and modify package.json)
 
 ### package.json
 ```json
