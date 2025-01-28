@@ -36,24 +36,94 @@ rm -rf node_modules/
 rm package-lock.json
 ```
 
-3. Install dependencies:
+3. Initialize npm project if package.json doesn't exist:
 ```bash
-npm install
+npm init -y
 ```
 
-4. Build the WebAssembly module:
+4. Update package.json scripts:
+```json
+{
+  "scripts": {
+    "dev": "webpack serve --open",
+    "build": "webpack --mode production"
+  }
+}
+```
+
+5. Create webpack.config.js in the root directory:
+```javascript
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+    mode: 'development',
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'index.js',
+    },
+    experiments: {
+        asyncWebAssembly: true
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, '.')
+        }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })
+    ]
+};
+```
+
+6. Create src/index.js:
+```javascript
+import { BountyInterface, start } from '../pkg/bounty_project.js';
+
+async function main() {
+    try {
+        start();
+        const bounty = new BountyInterface("0x0000");
+        await bounty.connect();
+        console.log("Connected successfully!");
+    } catch (e) {
+        console.error("Error:", e);
+    }
+}
+
+main();
+```
+
+7. Create index.html in the root directory:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bounty Project</title>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
+```
+
+8. Install dependencies:
+```bash
+npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
+```
+
+9. Build the WebAssembly module:
 ```bash
 wasm-pack build --target web
 ```
 
-5. Start the development server:
+10. Start the development server:
 ```bash
 npm run dev
-```
-
-6. Be sure to create/use a token in static/js/main.js :
-```
-const githubToken = 'YOUR_TOKEN_HERE'
 ```
 
 ## Smart Contract
@@ -81,14 +151,25 @@ The project uses a smart contract deployed on Sepolia testnet at: `0xDE4eADf86cd
 │   ├── lib.rs         # Rust/WASM core logic
 │   └── index.js       # JavaScript entry point
 ├── pkg/               # WebAssembly output (generated)
+├── index.html         # Main HTML file
+├── webpack.config.js  # Webpack configuration
 └── contracts/         # Smart contract code
 ```
 
 ## Troubleshooting
 
 If you encounter issues:
-1. Make sure all prerequisites are installed
-2. Try cleaning and rebuilding:
+
+1. "Cannot find module" or similar webpack errors:
+   - Make sure all files exist in the correct locations
+   - Check that src/index.js and webpack.config.js are set up correctly
+
+2. If you see "'webpack' is not recognized":
+   ```bash
+   npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
+   ```
+
+3. For any other issues, try cleaning and rebuilding:
    ```bash
    rm -rf pkg/
    rm -rf node_modules/
@@ -96,14 +177,18 @@ If you encounter issues:
    npm install
    wasm-pack build --target web
    ```
-3. Check the browser console for errors
-4. Ensure your MetaMask is connected to Sepolia testnet
+
+4. Check the browser console for errors
+
+5. Ensure your MetaMask is connected to Sepolia testnet
 
 ## Contributing
 
 Feel free to open issues or submit PRs!
 
 ## License
+
+This project is open source and available under the MIT License.
 
 HAPPY TESTING!
 
