@@ -25,7 +25,7 @@ I created it along with the companion repository ["decentra-chat"](https://githu
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Sepulcherz/bounty-project.git
+git clone https://github.com/Sepulcherz/Web3-Bounty-Hunting-MockRepo.git
 cd bounty-project
 ```
 
