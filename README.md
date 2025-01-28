@@ -48,10 +48,10 @@ wasm-pack build --target web
 
 5. Start the development server:
 ```bash
-npm run dev
+npm install --save-dev @babel/core @babel/preset-env babel-loader
 ```
 
-## Project Files
+## Project Files (IMPORTANT, you need to create these files manually)
 
 ### package.json
 ```json
@@ -112,6 +112,11 @@ async function run() {
 }
 
 run().catch(console.error);
+```
+
+Now you can run
+```
+npm run dev
 ```
 
 ## Smart Contract
