@@ -106,3 +106,32 @@ Feel free to open issues or submit PRs!
 ## License
 
 HAPPY TESTING!
+
+(And here's some screenshots below!)
+
+Connect your wallet first (important)
+
+![localhost_8080_ (4)](https://github.com/user-attachments/assets/7eb19e98-c582-4a96-aa31-05a3237619b1)
+
+
+![localhost_8080_ (5)](https://github.com/user-attachments/assets/58410edd-4bf2-48f9-8b52-c0f358bbf21d)
+
+Paste your repo (or my "decentra-chat", as you want)
+
+![localhost_8080_ (6)](https://github.com/user-attachments/assets/a40dd8ea-f9f2-47a3-a4f7-382e5aa267bc)
+
+Fork or branch
+
+![Capture d'écran 2025-01-28 090415](https://github.com/user-attachments/assets/3a12cc6c-3e2b-4802-8067-ef3892bcd07c)
+
+Submit your PR
+
+![Capture d'écran 2025-01-28 090433](https://github.com/user-attachments/assets/87808eb3-faa5-4c25-9c3e-1569e2cd9415)
+
+And voilà! You can observe your PR being created and click on "View PR" to get redirected to it!
+
+![Capture d'écran 2025-01-28 090447](https://github.com/user-attachments/assets/55cded30-f354-436f-a9d5-0b96d838fbfb)
+
+Lil' exemple after creating your PR
+
+![github com_Sepulcherz_decentra-chat_pull_90](https://github.com/user-attachments/assets/1a7db82c-03b0-4f87-84fe-481c14a288f7)
