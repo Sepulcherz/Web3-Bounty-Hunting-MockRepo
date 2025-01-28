@@ -72,7 +72,7 @@ npm install --save-dev @babel/core @babel/preset-env babel-loader
 }
 ```
 
-### webpack.config.js
+### webpack.config.js <- in root directory
 ```javascript
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
