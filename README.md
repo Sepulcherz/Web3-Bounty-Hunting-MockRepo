@@ -23,6 +23,12 @@ I created it along with the companion repository ["decentra-chat"](https://githu
 
 ## Installation
 
+# /!\IMPORTANT/!\
+
+Before anything : Create your own token via github and paste it in static/js/main.js (const githubToken = 'YOUR_TOKEN_HERE')
+If you don't do that, you might not be able to fetch data from the repo you want to work on.
+(For example, I worked with my "decentra-chat" repo here and had to create a classic token from my git profile which allows me to read/comment/create...etc. Maybe creating another git profile with a permanent token for the sole purpose of testing and developping would have been a better idea, but heh, I'm just new and testing stuff around here).
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/Sepulcherz/Web3-Bounty-Hunting-MockRepo.git
@@ -103,10 +109,6 @@ If you encounter issues:
 3. Check the browser console for errors
 
 4. Ensure your MetaMask is connected to Sepolia testnet
-
-## Contributing
-
-Feel free to open issues or submit PRs!
 
 ## License
 
