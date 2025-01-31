@@ -129,7 +129,7 @@ Paste your repo (my "decentra-chat" would not work for yourself, since I accesse
 
 ![localhost_8080_ (6)](https://github.com/user-attachments/assets/a40dd8ea-f9f2-47a3-a4f7-382e5aa267bc)
 
-Fork or branch
+Fork or branch (Forking happens if you're not the repo's owner, and if you are the owner, then it branches automatically)
 
 ![Capture d'écran 2025-01-28 090415](https://github.com/user-attachments/assets/3a12cc6c-3e2b-4802-8067-ef3892bcd07c)
 
